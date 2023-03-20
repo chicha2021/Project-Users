@@ -26,7 +26,7 @@ const User = sequelize.define('users', {
         type: DataTypes.STRING,
     },
     company: {
-        type: DataTypes.ENUM("1", "2", "3", "4", "5"),
+        type: DataTypes.ARRAY(DataTypes.INTEGER),
     }
 }, {
     timestamps: false

@@ -13,8 +13,8 @@ const Company = sequelize.define('companies', {
     name: {
         type: DataTypes.STRING,
     },
-    company: {
-        type: DataTypes.ENUM("1", "2", "3", "4", "5"),
+    codemp: {
+        type: DataTypes.INTEGER,
     }
 }, {
     timestamps: false
