@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize'); //Biblioteca completa de seq
 
 
-const sequelize = new Sequelize('Estancia', 'postgres', 'Invent$22', {
+const sequelize = new Sequelize('estancia', 'postgres', 'postgres', {
     host: "localhost",
     dialect: "postgres"
 });
