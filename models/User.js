@@ -24,10 +24,11 @@ const User = sequelize.define('users', {
     },
     currentCompany: {
         type: DataTypes.STRING,
-    },
-    company: {
-        type: DataTypes.ARRAY(DataTypes.INTEGER),
     }
+    // ,
+    // company: {
+    //     type: DataTypes.ARRAY(DataTypes.INTEGER),
+    // }
 }, {
     timestamps: false
   });
@@ -36,6 +37,3 @@ module.exports = {
     User
 } 
 
-User.belongsToMany(Company, { through: 'user-company' });
-
-Company.belongsToMany(User, { through: 'user-company' });

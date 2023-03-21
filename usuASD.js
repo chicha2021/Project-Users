@@ -5,8 +5,8 @@ const data = [
         "emp-usu": 0,
         "cod-emp": [
             12,
-            1,
-            5,
+            11,
+            15,
             2,
             1
         ],
@@ -32,7 +32,7 @@ const data = [
         "cod-emp": [
             0,
             7,
-            7,
+            17,
             8,
             4
         ],
@@ -56,9 +56,9 @@ const data = [
         "cla-usu": "847bb684a2f9cfa6531e34f39ff42d4a",
         "emp-usu": 0,
         "cod-emp": [
-            4,
+            14,
             3,
-            3,
+            13,
             11,
             5
         ],
@@ -86,7 +86,7 @@ const data = [
             13,
             7,
             1,
-            13
+            15
         ],
         "des-usu": "LEONARDO RODRIGO DIAZ"
     },
@@ -98,7 +98,7 @@ const data = [
             9,
             15,
             10,
-            9,
+            19,
             8
         ],
         "des-usu": "MELINA SILVANA NUÑEZ"
@@ -111,8 +111,8 @@ const data = [
             7,
             8,
             12,
-            3,
-            5
+            13,
+            15
         ],
         "des-usu": ""
     },
@@ -186,7 +186,7 @@ const data = [
         "cla-usu": "7a037fa6ca4433d906454adcb5b39e42",
         "emp-usu": 0,
         "cod-emp": [
-            15,
+            14,
             15,
             5,
             7,
@@ -226,8 +226,8 @@ const data = [
         "emp-usu": 0,
         "cod-emp": [
             8,
-            8,
-            11,
+            9,
+            12,
             11,
             10
         ],
@@ -253,7 +253,7 @@ const data = [
         "cod-emp": [
             14,
             11,
-            14,
+            15,
             13,
             8
         ],
@@ -267,7 +267,7 @@ const data = [
             10,
             3,
             13,
-            10,
+            11,
             7
         ],
         "des-usu": "BARCO LEONARDO FABIAN"
@@ -422,7 +422,7 @@ const data = [
         "cod-emp": [
             8,
             11,
-            8,
+            9,
             1,
             2
         ],
@@ -489,7 +489,7 @@ const data = [
             12,
             14,
             13,
-            13
+            15
         ],
         "des-usu": "ALLEGA SILVINA SUSANA"
     },
@@ -551,14 +551,14 @@ const data = [
         "emp-usu": 0,
         "cod-emp": [
             1,
-            11,
+            12,
             11,
             1,
             2
         ],
         "des-usu": "CISNEROS BRAIAN EMANUEL"
     },
-    {
+   /* {
         "nom-usu": "10228@emusimundo.com",
         "cla-usu": "676a8a385591d215d9e48bde91c69fed",
         "emp-usu": 0,
@@ -106624,10 +106624,42 @@ const data = [
             15
         ],
         "des-usu": ""
-    }
+    }*/
 ]
 
 module.exports = 
     data
 
  ;
+
+ /*
+   {
+    "id": "9bcb9910-08ee-45c1-9478-73b983cb30bd",
+    "name": "Estancia",
+    "codemp": 14
+  },
+  {
+    "id": "85d94fc8-59c4-4c63-9f58-200f00be9eb2",
+    "name": "Valuar",
+    "codemp": 11
+  },
+  {
+    "id": "352656e8-7b31-4a9c-962e-299c3a2e0c93",
+    "name": "Bertolaccini",
+    "codemp": 12
+  },
+  {
+    "id": "6de58dd1-69dd-4336-896c-5ea13ad9fe92",
+    "name": "Kube",
+    "codemp": 13
+  },
+  {
+    "id": "2b0bc8fc-9991-465f-9448-2e0684e44ebb",
+    "name": "Nueva Mutual",
+    "codemp": 15
+  },
+  {
+    "id": "b518c908-8ff2-419b-bb97-dc20c254fdec",
+    "name": "Medicar",
+    "codemp": 9
+  }*/
