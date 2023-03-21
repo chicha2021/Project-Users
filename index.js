@@ -67,13 +67,13 @@ app.post('/user', async (req, res) => {
         //const id = "5dfc3822-cdd5-40e7-b905-45687fa29dcd";
         // const codemp = "eab7fe53-412b-4e7e-a4e8-a12519181a96";
         const { email  /*id, codemp*/ } = req.body;
-        console.log(req.body)
+        //console.log(req.body)
         if ( !email ) {
             return res.status(500).json({ msg: "No se recibieron los datos necesarios." })
         }
         const newUser = await User.findOne({where: {email: email}, include: {model: Company}});
 
-        console.log(newUser);
+        //console.log(newUser);
         return res.status(200).json({ user: newUser });
     } catch (error) {
         console.log(error);
