@@ -104,12 +104,12 @@ app.post('/user', async (req, res) => {
 
 app.get('/colaborators/:id', async (req, res) => {
     const { id } = req.params;
-    console.log(id)
+    
     try {
-        const infoC = await Colaborator.findOne({ where: { id: id } }, {
+        const infoC = await Colaborator.findOne( {
             include: [{ model: User, include: [{ model: Company }] }]
-        })
-
+        }, { where: { id: id } })
+        
         res.status(200).json(infoC)
 
 
