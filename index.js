@@ -7,7 +7,7 @@ const data = require('./usuASD.js');
 const { Colaborator } = require('./models/Colaborator.js');
 
 app.get('/', async (req, res) => {
-    const users = await User.findAll({ include: { model: Company } });
+    const users = await User.findAll({ include: [{ model: Company },{model: Colaborator} ]});
     const company = await Company.findAll();
     res.send(users)
 });
@@ -39,6 +39,8 @@ app.get('/company', async (req, res) => {
 //                 pass: e['cla-usu'],
 //                 name: e['des-usu']
 //             });
+//             const colaborator = await Colaborator.findOne({where: {email: e['nom-usu']}});
+//             if(colaborator) colaborator.addUser(newUser);
 //             e['cod-emp'].map(async (i) => {
 //                 const company = await Company.findOne({
 //                     where: {codemp: i}
@@ -90,7 +92,7 @@ app.post('/user', async (req, res) => {
             return res.status(500).json({ msg: "No se recibieron los datos necesarios." })
         }
         if (email) {
-            const user = await User.findOne({ where: { email: email }, include: { model: Company } });
+            const user = await User.findOne({ where: { email: email }, include:[{model: Colaborator}, { model: Company } ]});
             res.status(200).json(user)
         }
     } catch (error) {
@@ -105,6 +107,20 @@ app.get('/colaborators/:id', async (req, res) => {
     console.log(id)
     try {
         const infoC = await Colaborator.findOne({ where: { id: id } }, {
+            include: [{ model: User, include: [{ model: Company }] }]
+        })
+
+        res.status(200).json(infoC)
+
+
+
+    } catch (error) {
+        console.log(error)
+    }
+})
+app.get('/colaborators', async (req, res) => {
+    try {
+        const infoC = await Colaborator.findAll({
             include: [{ model: User, include: [{ model: Company }] }]
         })
 
@@ -213,14 +229,6 @@ app.post('/company', async (req, res) => {
         console.log(error);
     }
 })
-
-
-
-
-
-
-
-
 
 
 
