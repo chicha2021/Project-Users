@@ -1,5 +1,5 @@
-const { sequelize } = require ('../db/connection.js');
-const { DataTypes } = require ('sequelize');
+const { sequelize } = require('../db/connection.js');
+const { DataTypes } = require('sequelize');
 
 
 
@@ -28,37 +28,61 @@ const Colaborator = sequelize.define('colaborators', {
     nacionality: {
         type: DataTypes.STRING,
     },
-    civilstate:{
+    civilstate: {
         type: DataTypes.STRING,
     },
-    dni:{
+    dni: {
         type: DataTypes.STRING,
     },
-    cuil:{
+    cuil: {
         type: DataTypes.STRING,
     },
-    domdni:{
+    domdni: {
         type: DataTypes.STRING,
     },
-    domreal:{
+    domreal: {
         type: DataTypes.STRING,
     },
-    loc:{
+    loc: {
         type: DataTypes.STRING,
     },
-    prov:{
+    prov: {
         type: DataTypes.STRING,
     },
-    codpostal:{
+    codpostal: {
         type: DataTypes.STRING,
     },
-    correo:{
+    correo: {
         type: DataTypes.STRING,
     },
-    fechanacimiento:{
+    /* campos para agregar
+    nivelform:{
         type: DataTypes.STRING,
     },
-    isDeleted:{
+carrera:{
+        type: DataTypes.STRING,
+    },
+emailpersonal:{
+        type: DataTypes.STRING,
+    },
+edad:{
+        type: DataTypes.STRING,
+    },
+sexo:{
+        type: DataTypes.STRING,
+    },
+phone:{
+        type: DataTypes.STRING,
+    },
+licConducir:{
+        type: DataTypes.STRING,
+    },
+
+    */
+    fechanacimiento: {
+        type: DataTypes.STRING,
+    },
+    isDeleted: {
         type: DataTypes.BOOLEAN,
     }
     // ,
@@ -67,7 +91,7 @@ const Colaborator = sequelize.define('colaborators', {
     // }
 }, {
     timestamps: false
-  });
+});
 
 module.exports = {
     Colaborator
