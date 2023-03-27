@@ -96,11 +96,11 @@ const data = [
         "cla-usu": "6e39d12f4d3022a213be1c0d24d58dd4",
         "emp-usu": 0,
         "cod-emp": [
-            9,
+            14,
             15,
             10,
-            19,
-            8
+            13,
+            11
         ],
         "des-usu": "MELINA SILVANA NUÑEZ"
     },

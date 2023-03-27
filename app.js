@@ -21,6 +21,9 @@ Company.belongsToMany(User, { through: 'user-company' });
 
 //Colaborator.toMany(User)
 
+Colaborator.hasMany(User);
+User.belongsTo(Colaborator);
+
 
 
 module.exports = app;
