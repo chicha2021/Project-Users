@@ -6,10 +6,10 @@ const { User } = require('./models/User');
 const { Company } = require('./models/Company');
 const { Colaborator } = require('./models/Colaborator');
 const app = express();
-const origin = "http://localhost:3000";
+//const origin = "http://192.168.161.139:3000";
 
 app.use(express.json());
-app.use(cors({ origin: origin }));
+app.use(cors(   ));
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(morgan('dev'));
@@ -19,7 +19,7 @@ User.belongsToMany(Company, { through: 'user-company' });
 
 Company.belongsToMany(User, { through: 'user-company' });
 
-Colaborator.toMany(User)
+//Colaborator.toMany(User)
 
 
 

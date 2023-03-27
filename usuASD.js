@@ -1,14 +1,15 @@
 const data = [
     {
-        "nom-usu": "0001@emusimundo.com",
-        "cla-usu": "914e3b34e7f2c10b6a80a33698a7fd97",
+        "nom-usu": "admin@admin.com",
+        "cla-usu": "admin",
         "emp-usu": 0,
         "cod-emp": [
             12,
             11,
-            15,
-            2,
-            1
+            14,
+            10,
+            13,
+            15
         ],
         "des-usu": "GIANLUCA FERNAN SANCHEZ"
     },

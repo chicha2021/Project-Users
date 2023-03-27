@@ -22,12 +22,12 @@ app.get('/company', async (req, res) => {
 //SOLO EJECUTAR PARA LLENAR LA BASE DE DATOS CON LOS USUARIOS
 // app.post('/user', async (req, res) => {
 //     try {
-//         // const id = "78d4c30f-4166-40a9-afe3-bfbc8a4b5445";
-//         // const VLR = "d7ecdd9c-098b-417f-8b00-4669ad1189bb"
-//         // const NUMUSE = "96a596d5-8efc-47d5-8837-f9b7ef176c2a"
-//         // const MB = "c6c149bf-5093-43e8-af1e-f97d3eeb241b"
+//         const id = "78d4c30f-4166-40a9-afe3-bfbc8a4b5445";
+//         const VLR = "d7ecdd9c-098b-417f-8b00-4669ad1189bb"
+//         const NUMUSE = "96a596d5-8efc-47d5-8837-f9b7ef176c2a"
+//         const MB = "c6c149bf-5093-43e8-af1e-f97d3eeb241b"
 
-//         //const { email, pass, /*id, codemp*/ } = req.body;
+//         const { email, pass, /*id, codemp*/ } = req.body;
 
 //         // if ( !email || !pass) {
 //         //     return res.status(500).json({ msg: "No se recibieron los datos necesarios." })
@@ -43,10 +43,10 @@ app.get('/company', async (req, res) => {
 //                 const company = await Company.findOne({
 //                     where: {codemp: i}
 //                 });
-//                 // const allCompany = Promise.all(company);
+//                 //const allCompany = Promise.all(company);
 //                 if(company) newUser.addCompany(company);
 
-//                 //console.log("va pasando")
+//                 console.log("va pasando")
 //             })
 
 //         })
