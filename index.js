@@ -149,7 +149,8 @@ app.post('/colaborators', async (req, res) => {
             prov,
             codpostal,
             correo,
-            fechanacimiento
+            fechanacimiento,
+            isDeleted: false,
             /*
             nivelform,
 carrera,
