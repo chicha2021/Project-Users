@@ -20,42 +20,42 @@ app.get('/company', async (req, res) => {
 
 
 //SOLO EJECUTAR PARA LLENAR LA BASE DE DATOS CON LOS USUARIOS
-// app.post('/users', async (req, res) => {
-//     try {
+app.post('/users', async (req, res) => {
+    try {
 
-//         //const { email, pass, /*id, codemp*/ } = req.body;
+        //const { email, pass, /*id, codemp*/ } = req.body;
 
         // if ( !email || !pass) {
         //     return res.status(500).json({ msg: "No se recibieron los datos necesarios." })
         // }
 
-//         data?.map(async (e) => {
-//             const newUser = await User.create({
-//                 email: e['nom-usu'],
-//                 pass: e['cla-usu'],
-//                 name: e['des-usu']
-//             });
-//             e['cod-emp'].map(async (i) => {
-//                 const company = await Company.findOne({
-//                     where: {codemp: i}
-//                 });
-//                 // const allCompany = Promise.all(company);
-//                 if(company) newUser.addCompany(company);
+        data?.map(async (e) => {
+            const newUser = await User.create({
+                email: e['nom-usu'],
+                pass: e['cla-usu'],
+                name: e['des-usu']
+            });
+            e['cod-emp'].map(async (i) => {
+                const company = await Company.findOne({
+                    where: {codemp: i}
+                });
+                // const allCompany = Promise.all(company);
+                if(company) newUser.addCompany(company);
 
-//                 //console.log("va pasando")
-//             })
+                //console.log("va pasando")
+            })
 
-//         })
-
-
+        })
 
 
-//         return res.status(200).json(data);
 
-//     } catch (error) {
-//         console.log(error);
-//     }
-// })
+
+        return res.status(200).json(data);
+
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 //POST LOGIN
 // app.post('/user', async (req, res) => {
@@ -78,6 +78,7 @@ app.get('/company', async (req, res) => {
 // })
 
 //GET
+
 app.post('/user', async (req, res) => {
     const { email } = req.body;
     console.log(email)
@@ -98,13 +99,13 @@ app.post('/user', async (req, res) => {
 
 app.get('/colaborators/:id', async (req, res) => {
     const { id } = req.params;
-
+    console.log(id)
     try {
-        const infoC = await Colaborator.findOne({
+        const infoCC = await Colaborator.findOne({ where: { id: id } },{
             include: [{ model: User, include: [{ model: Company }] }]
-        }, { where: { id: id } })
-
-        res.status(200).json(infoC)
+        })
+       
+        res.status(200).json(infoCC)
 
 
 
