@@ -84,6 +84,7 @@ licConducir:{
     },
     isDeleted: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false
     }
     // ,
     // company: {
