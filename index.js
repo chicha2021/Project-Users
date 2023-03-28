@@ -209,7 +209,7 @@ app.delete('/colaborators/:id', async (req, res) => {
         //si no funciona hacer el find
 
         let co = await Colaborator.update({
-            isDeleted: deleted
+            isDeleted: true
         }, {
             where: { id: id }
         })
